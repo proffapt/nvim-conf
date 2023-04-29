@@ -54,6 +54,7 @@ local plugins = {
       require"live_server.util".install()
     end,
   },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
