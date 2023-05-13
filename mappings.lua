@@ -4,6 +4,7 @@ local M = {}
 M.general = {
   n = {
     [";"] = { ":", "enter command mode", opts = { nowait = true } },
+    ["<leader>l"] = {"<cmd> :LiveServer <CR>", "Toggle LiveServer on/off"},
 
     -- Buffer management
     ["<leader>q"] = {"<cmd> q! <CR>", "exit current tab"},
