@@ -1,3 +1,7 @@
+local home = os.getenv("HOME")
+local path = home .. "/.local/share/nvim/lazy/nvim-treesitter"
+vim.opt.rtp:prepend(path)
+
 require'nvim-treesitter.configs'.setup {
   ensure_installed = { "python", "javascript", "lua", "html", "css", "bash", "go" }, -- List of languages you want to support
   highlight = {

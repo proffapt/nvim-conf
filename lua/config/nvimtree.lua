@@ -1,2 +1,2 @@
 -- Keymaps
-vim.keymaps.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', Opts)

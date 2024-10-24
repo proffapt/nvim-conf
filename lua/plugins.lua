@@ -41,9 +41,14 @@ require("lazy").setup({
         end,
     },
     -- Tree Sitter
-    { 
+    {
         'nvim-treesitter/nvim-treesitter', 
-        run = ':TSUpdate' 
+        config = function()
+            local path = "/Users/proffapt/.local/share/nvim/lazy/nvim-treesitter"
+            vim.opt.rtp:prepend(path)
+            require("config.treesitter")
+        end,
+        run = ':TSUpdate',
     },
     -- Vscode-like pictograms
 	{
