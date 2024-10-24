@@ -44,8 +44,6 @@ require("lazy").setup({
     {
         'nvim-treesitter/nvim-treesitter', 
         config = function()
-            local path = "/Users/proffapt/.local/share/nvim/lazy/nvim-treesitter"
-            vim.opt.rtp:prepend(path)
             require("config.treesitter")
         end,
         run = ':TSUpdate',
@@ -78,4 +76,6 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
+    -- LSP Injection
+    'nvimtools/none-ls.nvim',
 })
