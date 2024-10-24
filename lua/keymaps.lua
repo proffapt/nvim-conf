@@ -2,7 +2,7 @@
 vim.g.mapleader = " "
 
 -- define common options
-local opts = {
+opts = {
     noremap = true,      -- non-recursive
     silent = true,       -- do not show message
 }
@@ -79,4 +79,5 @@ vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', opts)
 -- IMPORT KEYMAPS FROM PLUGINS --
 ---------------------------------
 require('config.telescope')
+require('config.nvimtree')
 

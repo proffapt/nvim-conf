@@ -8,6 +8,10 @@ require('plugins')
 -- other things might be dependent on plugins.
 -- Like: keymaps using floatterm, colorscheme etc.
 
+-- Plugin Configurations
+require('config.treesitter')
+--
+
 require('colorscheme')
 require('options')
 require('keymaps')

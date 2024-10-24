@@ -28,6 +28,23 @@ require("lazy").setup({
         'windwp/nvim-autopairs', 
         event = 'InsertEnter' 
     },
+    -- File tree
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "*",
+        lazy = false,
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require("nvim-tree").setup {}
+        end,
+    },
+    -- Tree Sitter
+    { 
+        'nvim-treesitter/nvim-treesitter', 
+        run = ':TSUpdate' 
+    },
     -- Vscode-like pictograms
 	{
 		"onsails/lspkind.nvim",
