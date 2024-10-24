@@ -4,8 +4,8 @@ local has_words_before = function()
     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
 
-local luasnip = require("luasnip")
 local cmp = require("cmp")
+local luasnip = require("luasnip")
 
 cmp.setup({
     snippet = {
@@ -77,3 +77,20 @@ cmp.setup({
       { name = 'path' },        -- For path completion
   })
 })
+
+
+----------------
+-- Auto Pairs --
+----------------
+
+local npairs = require('nvim-autopairs')
+
+-- Setup autopairs
+npairs.setup({
+    -- Optional configuration
+    check_ts = true,  -- Enable treesitter integration
+})
+
+-- Use autopairs with completion
+cmp.event:on('confirm_done', require('nvim-autopairs.completion.cmp').on_confirm_done())
+

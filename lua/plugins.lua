@@ -16,8 +16,17 @@ require("lazy").setup({
     "tanvirtin/monokai.nvim",
     -- Fuzzy Finder
     {
-    'nvim-telescope/telescope.nvim', tag = '0.1.8',
-      dependencies = { 'nvim-lua/plenary.nvim' }
+        'nvim-telescope/telescope.nvim', tag = '0.1.8',
+        dependencies = { 
+            'nvim-lua/plenary.nvim' 
+        }
+    },
+    -- Manipulate surrounding quotes and brackets
+    'tpope/vim-surround',
+    -- Auto pairs
+    { 
+        'windwp/nvim-autopairs', 
+        event = 'InsertEnter' 
     },
     -- Vscode-like pictograms
 	{

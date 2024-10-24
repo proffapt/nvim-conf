@@ -8,10 +8,10 @@ local opts = {
 }
 
 -----------------
--- Normal mode --
+-- NORMAL MODE --
 -----------------
 
--- Configuration Related --
+-- CONFIGURATION RELATED --
 vim.keymap.set('n', '<leader>cr', ':w<CR> :luafile %:p<CR>', opts)
 
 -- WINDOW MANAGEMENT --
@@ -43,15 +43,15 @@ vim.keymap.set('n', '<C-S-Left>', ':vertical resize +1<CR>', opts)
 vim.keymap.set('n', '<C-S-Right>', ':vertical resize -1<CR>', opts)
 
 -----------------
--- Visual mode --
+-- VISUAL MODE --
 -----------------
 
--- Hint: start visual mode with the same area as the previous area and the same mode
+-- Start visual mode with the same area as the previous area and the same mode
 vim.keymap.set('v', '<', '<gv', opts)
 vim.keymap.set('v', '>', '>gv', opts)
 
 -------------------
--- Terminal mode --
+-- TERMINAL MODE --
 -------------------
 
 -- MULTIPLE WINDOW MANAGEMENT --
@@ -76,7 +76,7 @@ vim.keymap.set('t', 'jk', '<Esc>', opts)
 vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', opts)
 
 ---------------------------------
--- Import Keymaps From Plugins --
+-- IMPORT KEYMAPS FROM PLUGINS --
 ---------------------------------
 require('config.telescope')
 

@@ -14,8 +14,7 @@ require('mason-lspconfig').setup({
         'pylsp', 
         'lua_ls', 
         'gopls', 
-        'bashls', 
-        'terraformls' 
+        'bashls'
     },
 })
 
